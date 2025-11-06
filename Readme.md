@@ -32,7 +32,30 @@ A continuación dispones de una estructura a modo de ejemplo de lo que tienes qu
 
 ## Diseño de la API: 
 
-### TIPO DE LLAMADA (VERBO HTTP)
-- Descripción: 
-- Petición:
-- Respuesta:
+### HTTP GET /employees/{id}
+- Description: Let us obtain all the workers from the system.
+- Request: Requests data from a specified resource.
+- Response: Returns the employee data, and a 200 HTTP code if found, if not, then a 404 HTTP code.
+
+### HTTP POST /employees
+- Description: Let us create a new worker in the system.
+- Request: Submits data to be processed to a specified resource.
+- Response: 201 HTTP code that means CREATED and contain an entity that describes the status of the request and refers to the new resource
+or an 200 OK code or a 204 No Content HTTP code.
+
+### HTTP PUT /employees/{id}
+- Description: Let us fully update the employees data
+- Request: Updates a specified resource with the data provided.
+- Response: 200 OK HTTP code or a 204 No Content HTTP code.
+
+### HTTP DELETE /employees/{id}
+- Description: Let us delete an employee
+- Request: Deletes a specified resource.
+- Response: 200 OK, 202 Accepted, 204 No content
+
+### HTTP PATCH /employees/{id}
+- Description: Let us modify only one field without changing the entire employee data
+- Request: Applies partial modifications to a resource.
+- Response: 200 OK, 204 No Content
+
+
